@@ -1,0 +1,14 @@
+version: '3'
+services:
+   47-productpage:
+    build: ./bookinfo/src/productpage/.
+    ports:
+      - "9080:9080"
+   47-ratings:
+    build: ./bookinfo/src/ratings/.
+   47-review:
+    build: ./bookinfo/src/reviews/reviews-wlpcfg/.
+    environment:
+     - ENABLE_RATINGS:'${enable_ratings:-true}'
+   47-details:
+    build: ./bookinfo/src/details/.
