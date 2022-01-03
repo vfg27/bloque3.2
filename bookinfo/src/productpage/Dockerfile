@@ -4,4 +4,4 @@ WORKDIR creativa2Bloque2
 ENV GROUP_NUMBER '47'
 RUN pip3 install -r practica_creativa2-main/bookinfo/src/productpage/requirements.txt
 EXPOSE 9080
-CMD ["python3", "practica_creativa2-main/bookinfo/src/productpage/productpage_monolith.py", "9080"]
+CMD ["python3", "practica_creativa2-main/bookinfo/src/productpage/productpage.py", "9080"]
