@@ -3,8 +3,8 @@ services:
    47-productpage:
     image: 47/productpage
     build: ./bookinfo/src/productpage/.
-    ports:
-      - "9080:9080"
+    expose:
+      - "9080"
     environment:
      - GROUP_NUMBER:'${group_number:-47}'
    47-ratings:
