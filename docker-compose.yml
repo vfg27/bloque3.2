@@ -1,18 +1,18 @@
 version: '3'
 services:
    47-productpage:
-    image: <GROUP_NUMBER>/productpage
+    image: 47/productpage
     build: ./bookinfo/src/productpage/.
     ports:
       - "9080:9080"
    47-ratings:
-    image: <GROUP_NUMBER>/ratings
+    image: 47/ratings
     build: ./bookinfo/src/ratings/.
    47-reviews:
-    image: <GROUP_NUMBER>/reviews-v1
+    image: 47/reviews-v1
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     environment:
      - ENABLE_RATINGS:'${enable_ratings:-true}'
    47-details:
-    image: <GROUP_NUMBER>/details
+    image: 47/details
     build: ./bookinfo/src/details/.
