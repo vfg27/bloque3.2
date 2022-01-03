@@ -1,5 +1,5 @@
 FROM python:3.5.7
-COPY ./* .
+COPY ./* ./
 ENV GROUP_NUMBER 'Equipo47'
 RUN pip3 install -r requirements.txt
 EXPOSE 9080
