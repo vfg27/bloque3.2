@@ -9,16 +9,16 @@ services:
     image: 47/ratings
     build: ./bookinfo/src/ratings/.
     ports:
-      - "5000:9080"
+      - "9080"
    47-reviews:
     image: 47/reviews-v1
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     environment:
      - ENABLE_RATINGS:'${enable_ratings:-true}'
     ports:
-      - "7000:9080"
+      - "9080"
    47-details:
     image: 47/details
     build: ./bookinfo/src/details/.
     ports:
-      - "9000:9080"
+      - "9080"
