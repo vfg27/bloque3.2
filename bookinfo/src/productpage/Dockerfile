@@ -1,8 +1,7 @@
 FROM python:3.5.7
-COPY /root/bloque3.2/bookinfo/src/productpage ./
-WORKDIR ./productpage
-RUN ls -l 
+RUN git clone https://github.com/vfg27/creativa2Bloque2
+WORKDIR creativa2Bloque2
 ENV GROUP_NUMBER '47'
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install -r practica_creativa2-main/bookinfo/src/productpage/requirements.txt
 EXPOSE 9080
-CMD ["python3", "./productpage.py", "9080"]
+CMD ["python3", "practica_creativa2-main/bookinfo/src/productpage/productpage_monolith.py", "80"]
