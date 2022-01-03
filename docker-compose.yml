@@ -12,7 +12,7 @@ services:
     build: ./bookinfo/src/ratings/.
     environment:
      - ENABLE_EXTERNAL_BOOK_SERVICE:'${enable_external_book_service:-true}'
-       SERVICE_VERSION:'${service_version:-v1}'
+     - SERVICE_VERSION:'${service_version:-v1}'
     ports:
       - "9080"
    47-reviews:
