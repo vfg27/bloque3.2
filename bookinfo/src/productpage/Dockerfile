@@ -1,5 +1,6 @@
 FROM python:3.5.7
-COPY ./* ./
+COPY /root/bloque3.2/bookinfo/src/productpage ./
+WORKDIR ./productpage
 RUN ls -l 
 ENV GROUP_NUMBER '47'
 RUN pip3 install -r ./requirements.txt
