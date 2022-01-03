@@ -1,5 +1,6 @@
 FROM python:3.5.7
-COPY ./* ./
+RUN os.mkdir("app")
+COPY ./* ./app
 ENV GROUP_NUMBER '47'
 RUN pip3 install -r requirements.txt
 EXPOSE 9080
