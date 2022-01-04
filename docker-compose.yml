@@ -4,7 +4,7 @@ services:
     image: 47/productpage
     build: ./bookinfo/src/productpage/.
     ports:
-      - "9080"
+      - "9080:9080"
     environment:
      - GROUP_NUMBER=47
    47-ratings:
