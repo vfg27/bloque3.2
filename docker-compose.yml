@@ -3,6 +3,7 @@ services:
    47-productpage:
     build: ./bookinfo/src/productpage/.
     image: 47/productpage
+    container_name: 47-productpage
     volumes:
       - 47-app:/var/lib/productpage
     ports:
@@ -12,6 +13,7 @@ services:
    47-ratings:
     build: ./bookinfo/src/ratings/.
     image: 47/ratings
+    container_name: 47-ratings
     volumes:
       - 47-app:/var/lib/ratings
     environment:
@@ -22,6 +24,7 @@ services:
    47-reviews:
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     image: 47/reviews-v1
+    container_name: 47-reviews
     volumes:
       - 47-app:/var/lib/reviews
     environment:
@@ -31,6 +34,7 @@ services:
    47-details:
     build: ./bookinfo/src/details/.
     image: 47/details
+    container_name: 47-details
     volumes:
       - 47-app:/var/lib/details
     environment:
