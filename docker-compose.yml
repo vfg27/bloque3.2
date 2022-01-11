@@ -19,7 +19,7 @@ services:
     environment:
       - SERVICE_VERSION=v1 
     ports:
-      - "9050:9080"
+      - "9051:9080"
    47-reviews:
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     image: 47/reviews-v1
@@ -29,7 +29,7 @@ services:
     environment:
       - ENABLE_RATINGS=true
     ports:
-      - "9050:9080"
+      - "9052:9080"
    47-ratings:
     build: ./bookinfo/src/ratings/.
     image: 47/ratings
@@ -40,6 +40,6 @@ services:
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
       - SERVICE_VERSION=v1
     ports:
-      - "9050:9080"
+      - "9053:9080"
 volumes:
   47-app:
