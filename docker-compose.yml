@@ -6,10 +6,10 @@ services:
     container_name: 47-productpage
     volumes:
       - 47-app:/var/lib/productpage
-    ports:
-      - "9050-9080"
     environment:
       - GROUP_NUMBER=47
+    ports:
+      - "9050-9080"
    47-ratings:
     build: ./bookinfo/src/ratings/.
     image: 47/ratings
