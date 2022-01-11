@@ -10,15 +10,14 @@ services:
       - GROUP_NUMBER=47
     ports:
       - "9050-9080"
-   47-ratings:
-    build: ./bookinfo/src/ratings/.
-    image: 47/ratings
-    container_name: 47-ratings
+   47-details:
+    build: ./bookinfo/src/details/.
+    image: 47/details
+    container_name: 47-details
     volumes:
-      - 47-app:/var/lib/ratings
+      - 47-app:/var/lib/details
     environment:
-      - ENABLE_EXTERNAL_BOOK_SERVICE=true
-      - SERVICE_VERSION=v1
+      - SERVICE_VERSION=v1 
     ports:
       - "9050-9080"
    47-reviews:
@@ -31,14 +30,15 @@ services:
       - ENABLE_RATINGS=true
     ports:
       - "9050-9080"
-   47-details:
-    build: ./bookinfo/src/details/.
-    image: 47/details
-    container_name: 47-details
+   47-ratings:
+    build: ./bookinfo/src/ratings/.
+    image: 47/ratings
+    container_name: 47-ratings
     volumes:
-      - 47-app:/var/lib/details
+      - 47-app:/var/lib/ratings
     environment:
-      - SERVICE_VERSION=v1 
+      - ENABLE_EXTERNAL_BOOK_SERVICE=true
+      - SERVICE_VERSION=v1
     ports:
       - "9050-9080"
 volumes:
