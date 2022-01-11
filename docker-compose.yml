@@ -14,18 +14,18 @@ services:
      - ENABLE_EXTERNAL_BOOK_SERVICE=true
      - SERVICE_VERSION=v1
     ports:
-      - "9050:9080"
+      - "9080"
    47-reviews:
     image: 47/reviews-v1
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     environment:
      - ENABLE_RATINGS=true
     ports:
-      - "9050:9080"
+      - "9080"
    47-details:
     image: 47/details
     build: ./bookinfo/src/details/.
     environment:
      - SERVICE_VERSION=v1 
     ports:
-      - "9050:9080"
+      - "9080"
