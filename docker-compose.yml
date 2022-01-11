@@ -7,7 +7,7 @@ services:
     volumes:
       - 47-app:/var/lib/productpage
     ports:
-      - "9050:9080"
+      - "9050-9080"
     environment:
       - GROUP_NUMBER=47
    47-ratings:
@@ -20,7 +20,7 @@ services:
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
       - SERVICE_VERSION=v1
     ports:
-      - "9051:9080"
+      - "9050-9080"
    47-reviews:
     build: ./bookinfo/src/reviews/reviews-wlpcfg/.
     image: 47/reviews-v1
@@ -30,7 +30,7 @@ services:
     environment:
       - ENABLE_RATINGS=true
     ports:
-      - "9052:9080"
+      - "9050-9080"
    47-details:
     build: ./bookinfo/src/details/.
     image: 47/details
@@ -40,6 +40,6 @@ services:
     environment:
       - SERVICE_VERSION=v1 
     ports:
-      - "9053:9080"
+      - "9050-9080"
 volumes:
   47-app:
