@@ -21,7 +21,7 @@ services:
     ports:
       - "9051:9080"
    reviews:
-    build: ./bookinfo/src/reviewsV3/reviews-wlpcfg/.
+    build: ./bookinfo/src/reviewsV1/reviews-wlpcfg/.
     image: 47/reviews
     container_name: 47-reviews
     volumes:
