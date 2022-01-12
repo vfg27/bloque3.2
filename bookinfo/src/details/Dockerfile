@@ -4,7 +4,7 @@ COPY details.rb /opt/microservices/
 WORKDIR /opt/microservices
 ARG service_version
 ARG enable_external_book_service
-ENV SERVICE_VERSION ${service_version:-v3}
+ENV SERVICE_VERSION ${service_version:-v2}
 ENV ENABLE_EXTERNAL_BOOK_SERVICE ${enable_external_book_service:-true}
 EXPOSE 9080
 CMD ["ruby","details.rb","9080"]
