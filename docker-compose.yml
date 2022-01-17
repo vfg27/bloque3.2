@@ -28,7 +28,7 @@ services:
     volumes:
       - 47-app:/var/lib/reviews
     environment:
-      - ENABLE_RATINGS=true
+      - ENABLE_RATINGS=false
     ports:
       - "9052:9080"
    ratings:
